@@ -131,7 +131,7 @@ USE_TZ = True
 #jovi
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR / 'static'),
+    BASE_DIR / 'static')
     # Make sure 'staticfiles' is not included here
 ]
 #ends jovi
