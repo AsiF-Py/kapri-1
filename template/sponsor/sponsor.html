@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<main class="site-body">
+  <!-- page banner start -->
+  <section class="inner-page-banner"
+    style="background-image: url('{% static 'assets/images/bg/inner-page-banner.jpg' %}');">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="inner-page-title text-white">Sponsor</h2>
+          <ul class="page-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Sponsor</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- page banner end -->
+
+  <!-- sponsor section start -->
+  <section class="dark-overlay pt-120 pb-120" style="background-image: url('assets/images/bg/sponsor.jpg');">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Sponsor</span>
+            <h2 class="section-title">Join As A Sponsor</h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-10">
+          <form method="post">
+            {%csrf_token%}
+            <div class="row gy-4">
+              <div class="col-md-6">
+                {{form.full_name}}
+              </div>
+              <div class="col-md-6">
+                {{form.company_name}}
+              </div>
+              <div class="col-md-6">
+                {{form.email}}
+              </div>
+              <div class="col-md-6">
+                {{form.phone}}
+              </div>
+              <div class="col-md-6">
+                {{form.website}}
+              </div>
+              <div class="col-md-6">
+                {{form.address}}
+              </div>
+              <div class="col-lg-12">
+                {{form.message}}
+              </div>
+              <div class="col-lg-12 text-center">
+                <button type="submit" class="btn btn-main">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Here the sponsors-->
+
+      <section class="pt-120 pb-120 section-bg">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 text-center">
+              <div class="section-top">
+                <span class="top-title">Sponsors</span>
+                <h2 class="section-title">Our Lovely Pratner</h2>
+              </div>
+            </div>
+          </div><!-- row end -->
+          <div class="sponsor-slider">
+            <div class="single-slide">
+              <div class="sponsor-item">
+                <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+              </div>
+            </div><!-- single-slide end -->
+            <div class="single-slide">
+              <div class="sponsor-item">
+                <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+              </div>
+            </div><!-- single-slide end -->
+            <div class="single-slide">
+              <div class="sponsor-item">
+                <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+              </div>
+            </div><!-- single-slide end -->
+            <div class="single-slide">
+              <div class="sponsor-item">
+                <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+              </div>
+            </div><!-- single-slide end -->
+            <div class="single-slide">
+              <div class="sponsor-item">
+                <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+              </div>
+            </div><!-- single-slide end -->
+            <div class="single-slide">
+              <div class="sponsor-item">
+                <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+              </div>
+            </div><!-- single-slide end -->
+            <div class="single-slide">
+              <div class="sponsor-item">
+                <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+              </div>
+            </div><!-- single-slide end -->
+            <div class="single-slide">
+              <div class="sponsor-item">
+                <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+              </div>
+            </div><!-- single-slide end -->
+          </div><!-- sponsor-slider end -->
+        </div>
+      </section>
+      <!-- sponsor section end -->
+
+
+
+
+    </div>
+  </section>
+  <!-- sponsor section end -->
+
+
+</main><!-- site-body end -->
+
+
+{% endblock content %}

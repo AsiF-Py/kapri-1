@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<main class="site-body">
+  <!-- page banner start -->
+  <section class="inner-page-banner"
+    style="background-image: url('{% static 'assets/images/bg/inner-page-banner.jpg' %}');">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="inner-page-title text-white">Show Details</h2>
+          <ul class="page-breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li>Show Details</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- page banner end -->
+
+  <!-- show details section start -->
+  <section class="pt-120 pb-120 section-bg">
+    <div class="container">
+      <div class="row gy-4 justify-content-between align-items-center">
+        <div class="col-lg-6">
+          <div class="show-details-thumb">
+            <img src="{{show.image.url}}" alt="image">
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-6">
+          <div class="show-details-content">
+            <h2 class="section-title">“{{show.title}}”</h2>
+            <p>{{show.description}}
+            </p>
+            <h4 class="show-details-time">{{show.start_time}} - {{show.end_time}}</h4>
+            <h5 class="show-details-time">{{show.date}}</h4>
+              <div class="podcast-item-content">
+                <div class="artist-thumb">
+                  <img src="{{show.host.picture.url}}" alt="image">
+                </div>
+                <div class="artist-content">
+                  <h5 class="show-name">{{show.title}}</h5>
+                  <p class="artist-name">{{show.host.name}}</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- show details section end -->
+
+  <!-- guest section start -->
+  <section class="pb-120 section-bg">
+    <div class="container">
+      <h3 class="guest-area-title">Gest</h3>
+      <div class="row gy-4 justify-content-center">
+        {% for gest in show.gest.all %}
+        <div class="col-lg-3 col-sm-6">
+          <div class="guest-item">
+            <div class="guest-thumb">
+              <img src="{{gest.picture.url}}" alt="image">
+            </div>
+            <h4 class="guest-name">{{gest.name}}</h4>
+            <p>{{gest.role}}</p>
+          </div>
+        </div>
+
+        {%endfor %}
+
+      </div>
+    </div>
+  </section>
+  <!-- guest section end -->
+
+
+</main><!-- site-body end -->
+
+{% endblock content %}

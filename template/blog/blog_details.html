@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<main class="site-body">
+  <!-- page banner start -->
+  <section class="inner-page-banner"
+    style="background-image: url('{% static 'assets/images/bg/inner-page-banner.jpg' %}');">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="inner-page-title text-white">Blog K.O.</h2>
+          <ul class="page-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Blog Detalles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- page banner end -->
+
+  <!-- blog details section start -->
+  <section class="pt-120 pb-120 section-bg">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-xl-8">
+          <div class="blog-details-wrapper">
+            <div class="blog-details-thumb">
+              <img src="{{blog.image.url}}" alt="image">
+            </div>
+            <div class="blog-details-content">
+              <div class="blog-meta">
+                <span class="single-meta">{{blog.auther}}</span>
+                <span class="single-meta">{{blog.created}}</span>
+              </div>
+              <h2 class="blog-details-title">{{blog.title}}</h2>
+              <div>
+                {{blog.descriptions.html | safe}}
+              </div>
+
+            </div>
+          </div><!-- blog-details-wrapper end -->
+
+          <div class="blog-details-footer mt-60">
+            <!-- <div class="left">
+                <p class="text-white"><img src="assets/images/icons/comment.png" alt="image" class="me-2"> 2 Comments
+                </p>
+              </div> -->
+            <div class="right">
+              <ul class="social-links-white">
+                <!-- <li class="text-white fw-500">Share:</li> -->
+                <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#0"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div><!-- blog-details-footer end -->
+
+
+
+          <div class="comment-form-area">
+            <h4 class="mb-30">Comentarios:</h4>
+            <form method="post">
+              {% csrf_token %}
+              <div class="row gy-4">
+                <div class="col-lg-6">
+                  <input type="text" name="name" class="form-control" placeholder="Name">
+                </div>
+                <div class="col-lg-6">
+                  <input type="email" name="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="col-lg-12">
+                  <textarea name="body" class="form-control" placeholder="Write a comment"></textarea>
+                </div>
+                <div class="col-lg-12 text-center">
+                  <button type="submit" class="btn btn-main mt-4">Enviar</button>
+                </div>
+              </div>
+            </form>
+
+            <h5 class="py-4">All comments</h5>
+            <div>
+              {%for comment in comments%}
+
+              <blockquote>
+                <strong><i>{{comment.name}} | {{comment.created}}</i></strong>
+                <p>{{comment.body}}</p>
+              </blockquote>
+              {% endfor %}
+            </div>
+          </div><!-- comment-form-area end -->
+        </div>
+        <div class="col-xl-4">
+          <div class="widget-box">
+            <form class="search-form">
+              <input type="text" name="#0" class="form-control" placeholder="Search...">
+              <button type="submit" class="search-form-btn"><i class="ri-search-line"></i></button>
+            </form>
+
+            <h4 class="widget-box-title mt-30">Categorias</h4>
+            <ul class="cat-list">
+              <li><a href="multi-blog.html"><i class="ri-arrow-right-s-line"></i> Musica </a></li>
+              <li><a href="multi-blog.html"><i class="ri-arrow-right-s-line"></i> Artistas</a></li>
+              <li><a href="multi-blog.html"><i class="ri-arrow-right-s-line"></i> Podcasts</a></li>
+              <li><a href="multi-blog.html"><i class="ri-arrow-right-s-line"></i> Rolas</a></li>
+            </ul>
+
+            <h4 class="widget-box-title mt-30">Ultimos Post</h4>
+            <div class="side-post">
+              <div class="side-post-thumb">
+                <img src="{{recent_blog.image.url}}" alt="image">
+              </div>
+              <div class="side-post-content">
+                <h6 class="side-post-title"><a href="/blog/{{recent_blog.slug}}">{{recent_blog.title}}</a>
+                </h6>
+                <p class="side-post-date"><i class="ri-alarm-line me-2"></i>{{recent_blog.created}}</p>
+              </div>
+            </div><!-- side-post end -->
+            <!--
+              <div class="side-post">
+                <div class="side-post-thumb">
+                  <img src="assets/images/blog/2.jpg" alt="image">
+                </div>
+                <div class="side-post-content">
+                  <h6 class="side-post-title"><a href="multi-blog-details.html">Myself in the world of travel where
+                      anything
+                      is possible.</a>
+                  </h6>
+                  <p class="side-post-date"><i class="ri-alarm-line me-2"></i> 21 JUN, 2022</p>
+                </div>
+              </div> side-post end
+            </div>widget-box end -->
+
+            <div class="widget-box">
+              <h4 class="widget-box-title">Tag</h4>
+
+              <ul class="tag-list">
+                {% for tag in blog.tags.all %}
+                <li><a href="/blog/?tag={{tag.name}}">{{tag.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </div><!-- widget-box end -->
+
+            <div class="widget-box">
+              <h4 class="widget-box-title">Siguenos</h4>
+              <ul class="social-links-white">
+                <li>
+                  <a href="#0">
+                    <i class="ri-facebook-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <i class="ri-linkedin-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <i class="ri-twitter-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                </li>
+              </ul>
+            </div><!-- widget-box end -->
+
+            <!-- <div class="widget-box author-widget">
+              <div class="author-widget-thumb">
+                <img src="assets/images/blog/author.jpg" alt="image" class="rounded-0">
+                <ul class="social-link mt-1">
+                  <li><a href="#0"><i class="ri-facebook-fill"></i></a></li>
+                  <li><a href="#0"><i class="ri-linkedin-fill"></i></a></li>
+                  <li><a href="#0"><i class="ri-twitter-fill"></i></a></li>
+                  <li><a href="#0"><i class="ri-instagram-line"></i></a></li>
+                </ul>
+              </div>
+              <div class="author-widget-content">
+                <h5 class="author-name">RJ Mario</h5>
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>widget-box end -->
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- blog details section end -->
+
+  <section class="pt-120 pb-120">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Blog K.O.</span>
+            <h2 class="section-title"></h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-item">
+            <div class="blog-thumb">
+              <a href="blog-details.html" class="d-block h-100">
+                <img src="{{recent_blog.image.url}}" alt="image">
+              </a>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="single-meta">{{recent_blog.auther}}</span>
+                <span class="single-meta">{{recent_blog.created}}</span>
+              </div>
+              <h4 class="blog-title">
+                <a href="/blog/{{recent_blog.slug}}/">{{recent_blog.title}}</a>
+              </h4>
+              <a href="/blog/{{recent_blog.slug}}/" class="blog-btn">Lee mas</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-4 col-md-6">
+            <div class="blog-item">
+              <div class="blog-thumb">
+                <a href="blog-details.html" class="d-block h-100">
+                  <img src="assets/images/blog/2.jpg" alt="image">
+                </a>
+              </div>
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span class="single-meta">John Doe</span>
+                  <span class="single-meta">19 Jan 2022</span>
+                </div>
+                <h4 class="blog-title">
+                  <a href="blog-details.html">Contrary to popular belief, Lorem Ipsum is</a>
+                </h4>
+                <a href="blog-details.html" class="blog-btn">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-item">
+              <div class="blog-thumb">
+                <a href="blog-details.html" class="d-block h-100">
+                  <img src="assets/images/blog/3.jpg" alt="image">
+                </a>
+              </div>
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span class="single-meta">John Doe</span>
+                  <span class="single-meta">19 Jan 2022</span>
+                </div>
+                <h4 class="blog-title">
+                  <a href="blog-details.html">There are many variations of passages</a>
+                </h4>
+                <a href="blog-details.html" class="blog-btn">Read more</a>
+              </div>
+            </div>
+          </div>
+
+        </div> -->
+
+        <div class="mt-50 text-center">
+          <a href="blog.html" class="btn btn-main">View More</a>
+        </div>
+      </div>
+  </section>
+  <!-- blog section end -->
+
+
+
+</main><!-- site-body end -->
+
+{% endblock content %}

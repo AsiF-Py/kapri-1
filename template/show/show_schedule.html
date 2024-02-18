@@ -1,0 +1,358 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<main class="site-body">
+  <!-- page banner start -->
+  <section class="inner-page-banner"
+    style="background-image: url('{% static 'assets/images/bg/inner-page-banner.jpg' %}');">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="inner-page-title text-white">Show Schedule</h2>
+          <ul class="page-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Shows</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- page banner end -->
+
+  <!-- podcast section start -->
+  <section class="pt-120 pb-120 section-bg">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Live Show</span>
+            <h2 class="section-title">Podcast Schedule</h2>
+          </div>
+        </div>
+      </div>
+
+      <ul class="nav nav-tabs show-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="day1-tab" data-bs-toggle="tab" data-bs-target="#day1-tab-pane"
+            type="button" role="tab" aria-controls="day1-tab-pane" aria-selected="true">Saturday</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="day2-tab" data-bs-toggle="tab" data-bs-target="#day2-tab-pane" type="button"
+            role="tab" aria-controls="day2-tab-pane" aria-selected="false">Sunday</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="day3-tab" data-bs-toggle="tab" data-bs-target="#day3-tab-pane" type="button"
+            role="tab" aria-controls="day3-tab-pane" aria-selected="false">Monday</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="day4-tab" data-bs-toggle="tab" data-bs-target="#day4-tab-pane" type="button"
+            role="tab" aria-controls="day4-tab-pane" aria-selected="false">Tuesday</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="day5-tab" data-bs-toggle="tab" data-bs-target="#day5-tab-pane" type="button"
+            role="tab" aria-controls="day5-tab-pane" aria-selected="false">Wednesday</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="day6-tab" data-bs-toggle="tab" data-bs-target="#day6-tab-pane" type="button"
+            role="tab" aria-controls="day6-tab-pane" aria-selected="false">Thursday</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="day7-tab" data-bs-toggle="tab" data-bs-target="#day7-tab-pane" type="button"
+            role="tab" aria-controls="day7-tab-pane" aria-selected="false">Friday</button>
+        </li>
+      </ul>
+      <div class="tab-content show-tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="day1-tab-pane" role="tabpanel" aria-labelledby="day1-tab"
+          tabindex="0">
+          <div class="podcast-slider">
+            {%for show in sa%}
+            <div class="single-slide">
+              <div class="podcast-item link-item">
+                <a href="show-details.html" class="full-link"></a>
+                <div class="podcast-item-thumb">
+                  <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                  <div class="thumb-content">
+                    <p>{{show.start_time}}</p>
+                    <p>TO</p>
+                    <p>{{show.end_time}}</p>
+                  </div>
+                </div>
+                <div class="podcast-item-content">
+                  <div class="artist-thumb">
+                    <img src="{{show.host.picture.url}}" alt="image">
+                  </div>
+                  <div class="artist-content">
+                    <h5 class="show-name">{{show.title}}</h5>
+                    <p class="artist-name">{{show.host.role}}</p>
+                  </div>
+                </div>
+              </div><!-- podcast-item end -->
+            </div>
+            {%endfor%}
+          </div><!-- podcast-slider end-->
+        </div>
+        <div class="tab-pane fade" id="day2-tab-pane" role="tabpanel" aria-labelledby="day2-tab" tabindex="0">
+          <div class="podcast-slider">
+            {%for show in su%}
+            <div class="single-slide">
+              <div class="podcast-item link-item">
+                <a href="show-details.html" class="full-link"></a>
+                <div class="podcast-item-thumb">
+                  <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                  <div class="thumb-content">
+                    <p>{{show.start_time}}</p>
+                    <p>TO</p>
+                    <p>{{show.end_time}}</p>
+                  </div>
+                </div>
+                <div class="podcast-item-content">
+                  <div class="artist-thumb">
+                    <img src="{{show.host.picture.url}}" alt="image">
+                  </div>
+                  <div class="artist-content">
+                    <h5 class="show-name">{{show.title}}</h5>
+                    <p class="artist-name">{{show.host.role}}</p>
+                  </div>
+                </div>
+              </div><!-- podcast-item end -->
+            </div>
+            {%endfor%}
+
+          </div><!-- podcast-slider end -->
+        </div>
+        <div class="tab-pane fade" id="day3-tab-pane" role="tabpanel" aria-labelledby="day3-tab" tabindex="0">
+          <div class="podcast-slider">
+            {%for show in mo%}
+            <div class="single-slide">
+              <div class="podcast-item link-item">
+                <a href="show-details.html" class="full-link"></a>
+                <div class="podcast-item-thumb">
+                  <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                  <div class="thumb-content">
+                    <p>{{show.start_time}}</p>
+                    <p>TO</p>
+                    <p>{{show.end_time}}</p>
+                  </div>
+                </div>
+                <div class="podcast-item-content">
+                  <div class="artist-thumb">
+                    <img src="{{show.host.picture.url}}" alt="image">
+                  </div>
+                  <div class="artist-content">
+                    <h5 class="show-name">{{show.title}}</h5>
+                    <p class="artist-name">{{show.host.role}}</p>
+                  </div>
+                </div>
+              </div><!-- podcast-item end -->
+            </div>
+            {%endfor%}
+          </div><!-- podcast-slider end -->
+        </div>
+        <div class="tab-pane fade" id="day4-tab-pane" role="tabpanel" aria-labelledby="day4-tab" tabindex="0">
+          <div class="podcast-slider">
+            {%for show in we%}
+            <div class="single-slide">
+              <div class="podcast-item link-item">
+                <a href="show-details.html" class="full-link"></a>
+                <div class="podcast-item-thumb">
+                  <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                  <div class="thumb-content">
+                    <p>{{show.start_time}}</p>
+                    <p>TO</p>
+                    <p>{{show.end_time}}</p>
+                  </div>
+                </div>
+                <div class="podcast-item-content">
+                  <div class="artist-thumb">
+                    <img src="{{show.host.picture.url}}" alt="image">
+                  </div>
+                  <div class="artist-content">
+                    <h5 class="show-name">{{show.title}}</h5>
+                    <p class="artist-name">{{show.host.role}}</p>
+                  </div>
+                </div>
+              </div><!-- podcast-item end -->
+            </div>
+            {%endfor%}
+          </div><!-- podcast-slider end -->
+        </div>
+        <div class="tab-pane fade" id="day5-tab-pane" role="tabpanel" aria-labelledby="day5-tab" tabindex="0">
+          <div class="podcast-slider">
+            {%for show in tu%}
+            <div class="single-slide">
+              <div class="podcast-item link-item">
+                <a href="show-details.html" class="full-link"></a>
+                <div class="podcast-item-thumb">
+                  <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                  <div class="thumb-content">
+                    <p>{{show.start_time}}</p>
+                    <p>TO</p>
+                    <p>{{show.end_time}}</p>
+                  </div>
+                </div>
+                <div class="podcast-item-content">
+                  <div class="artist-thumb">
+                    <img src="{{show.host.picture.url}}" alt="image">
+                  </div>
+                  <div class="artist-content">
+                    <h5 class="show-name">{{show.title}}</h5>
+                    <p class="artist-name">{{show.host.role}}</p>
+                  </div>
+                </div>
+              </div><!-- podcast-item end -->
+            </div>
+            {%endfor%}
+          </div><!-- podcast-slider end -->
+        </div>
+        <div class="tab-pane fade" id="day6-tab-pane" role="tabpanel" aria-labelledby="day6-tab" tabindex="0">
+          <div class="podcast-slider">
+            {%for show in th%}
+            <div class="single-slide">
+              <div class="podcast-item link-item">
+                <a href="show-details.html" class="full-link"></a>
+                <div class="podcast-item-thumb">
+                  <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                  <div class="thumb-content">
+                    <p>{{show.start_time}}</p>
+                    <p>TO</p>
+                    <p>{{show.end_time}}</p>
+                  </div>
+                </div>
+                <div class="podcast-item-content">
+                  <div class="artist-thumb">
+                    <img src="{{show.host.picture.url}}" alt="image">
+                  </div>
+                  <div class="artist-content">
+                    <h5 class="show-name">{{show.title}}</h5>
+                    <p class="artist-name">{{show.host.role}}</p>
+                  </div>
+                </div>
+              </div><!-- podcast-item end -->
+            </div>
+            {%endfor%}
+          </div>
+        </div><!-- podcast-slider end -->
+      </div>
+      <div class="tab-pane fade" id="day7-tab-pane" role="tabpanel" aria-labelledby="day7-tab" tabindex="0">
+        <div class="podcast-slider">
+          {%for show in fr%}
+          <div class="single-slide">
+            <div class="podcast-item link-item">
+              <a href="show-details.html" class="full-link"></a>
+              <div class="podcast-item-thumb">
+                <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                <div class="thumb-content">
+                  <p>{{show.start_time}}</p>
+                  <p>TO</p>
+                  <p>{{show.end_time}}</p>
+                </div>
+              </div>
+              <div class="podcast-item-content">
+                <div class="artist-thumb">
+                  <img src="{{show.host.picture.url}}" alt="image">
+                </div>
+                <div class="artist-content">
+                  <h5 class="show-name">{{show.title}}</h5>
+                  <p class="artist-name">{{show.host.role}}</p>
+                </div>
+              </div>
+            </div><!-- podcast-item end -->
+          </div>
+          {%endfor%}
+        </div><!-- podcast-slider end -->
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- podcast section end -->
+
+  <!-- previous show section start -->
+  <section class="previous-show-section pt-120 pb-120 overflow-hidden"
+    style="background-image: url('assets/images/bg/previous-show.jpg');">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Yesterday</span>
+            <h2 class="section-title">Previous shows </h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+    </div>
+    <div class="previous-show-slider">
+      {% for show in previous_show %}
+      <div class="single-slide">
+        <div class="show-item style-two">
+          <div class="thumb">
+            <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+          </div>
+          <audio controls src="{% if show.sound%} {{show.sound.url}} {%endif%}" class="style-two"></audio>
+          <div class="show-item-content">
+            <div class="show-item-top">
+              <h5 class="show-item-top-title">{{show.title}}</h5>
+              <span class="show-item-duration">
+                <p>{{ show.duration }} min
+              </span>
+            </div>
+            <div class="artist-thumb">
+              <img src="{{show.host.picture.url}}" alt="image">
+            </div>
+            <div class="artist-content">
+              <h5 class="show-name">{{show.host.name}}</h5>
+              <p class="artist-name">{{show.host.role}}</p>
+              <h5 class="show-details-time">Aired: {{show.date}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </section>
+  <!-- previous show section end -->
+
+  <!-- upcoming show start -->
+  <section class="pt-120 pb-120 section-bg">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Show</span>
+            <h2 class="section-title">Upcoming show</h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="upcoming-show">
+            <div class="upcoming-content">
+              <h4 class="upcoming-title">{{upcoming_show.title}}</h4>
+              <p>{{upcoming_show.description}}
+              </p>
+              <div class="show-rj">
+                <div class="show-rj-thumb">
+                  <img src="{{upcoming_show.host.picture.url}}" alt="image">
+                </div>
+                <div class="show-rj-content">
+                  <h4 class="show-rj-name">{{upcoming_show.host.name}}</h4>
+                  <p>{{upcoming_show.start_time}} To {{upcoming_show.end_time}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming-thumb">
+              <img src="{% if upcoming_show.image%} {{upcoming_show.image.url}} {%endif%}" alt="image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- upcoming show end -->
+
+  <!-- subscribe section start -->
+
+
+</main><!-- site-body end -->
+
+
+{% endblock content %}

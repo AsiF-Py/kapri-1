@@ -1,0 +1,338 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<main class="site-body">
+  <!-- page banner start -->
+  <section class="inner-page-banner"
+    style="background-image: url({% static 'assets/images/bg/inner-page-banner.jpg' %});">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="inner-page-title text-white">Acerca de Nosotros</h2>
+          <ul class="page-breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li>Acerca de Nosotros</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- page banner end -->
+
+  <!-- about section start -->
+  <section class="pt-120 pb-120 section-bg overflow-hidden">
+    <div class="container">
+      <div class="row gy-4 align-items-center justify-content-between">
+
+        <div class="col-xl-5 col-lg-6">
+          <div class="about-thumb-wrapper">
+            <img src="{% static 'assets/images/about/left-img.jpg'%}" alt="image">
+            <img src="{% static 'assets/images/about/about-circle.png' %}" alt="image" class="about-thumb-circle">
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-6">
+          <span class="top-title">Kapri.Online</span>
+          <h5>Radio con Cultura</h5>
+          <span>Hits Globales:</span> Las canciones más populares de Pop y Rock de diferentes países.<br>
+          Descubrimientos Semanales: Nuevos lanzamientos y artistas emergentes de todo el mundo.<br>
+          <b>Formato y Género</b><br><br>
+
+          Principal: Pop y Rock Internacional<br>
+          Subgéneros: Pop-Rock, Indie Pop, Soft Rock, Classic Rock, Alternative Rock.<br><br>
+
+          <b>Programación y Contenido</b><br><br>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            Ver Mas
+          </button>
+        </div>
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <h3>Some text to enable scrolling..</h3>
+                <!-- Aqui el modal -->
+                <p>
+                  <b>Formato y Género</b><br><br>
+
+                  Principal: Pop y Rock Internacional<br>
+                  Subgéneros: Pop-Rock, Indie Pop, Soft Rock, Classic Rock, Alternative Rock.<br><br>
+
+                  <b>Programación y Contenido</b><br><br>
+
+                  Hits Globales: Las canciones más populares de Pop y Rock de diferentes países.<br>
+                  Descubrimientos Semanales: Nuevos lanzamientos y artistas emergentes de todo el mundo.<br>
+
+                  Clásicos del Rock: Un viaje por las décadas de oro del rock.<br>
+                  Pop Internacional: Explorando la música pop más allá de las listas de éxitos.<br>
+                  Noches de Rock Alternativo: Espacio dedicado a los sonidos más vanguardistas y experimentales del
+                  rock.<br>
+
+                  <b>Interacción con la Audiencia</b><br><br>
+
+                  Solicitudes y Dedicaciones: Los oyentes pueden solicitar canciones y enviar dedicatorias usando
+                  nuestras redes sociales y canales digitales.<br>
+                  Entrevistas con Artistas: Diálogos con músicos populares y emergentes.<br>
+                  Concursos y Promociones: Oportunidades para ganar premios y experiencias exclusivas relacionadas con
+                  la música.<br><br>
+
+                  <b>Plataforma y Tecnología</b><br><br>
+
+                  Transmisión en Vivo 24/7: Disponible en línea a través de la página web y aplicaciones móviles.<br>
+                  Integración con Redes Sociales: Interacción en tiempo real a través de plataformas como X, Instagram
+                  y
+                  Facebook.<br>
+                  Calidad de Audio de Alta Definición: Para una experiencia auditiva óptima 192kbps.<br><br>
+
+                  <b>Marketing y Promoción</b><br><br>
+
+                  Colaboraciones con Marcas: Asociaciones con marcas relacionadas con la música para promociones y
+                  eventos.<br>
+                  Publicidad en Redes Sociales: Campañas en plataformas digitales para atraer a un público global.<br>
+                  Participación en Festivales de Música: Presencia en eventos musicales internacionales para aumentar
+                  la
+                  visibilidad.<br><br>
+
+                  <b>Objetivos y Misión</b><br><br>
+
+                  Unir a las personas a través de la música: Crear una comunidad global de amantes de la música.<br>
+                  Promover la Diversidad Musical: Exhibir la riqueza y variedad de la música Pop y Rock de todo el
+                  mundo.<br>
+                  <span class="close">&times;</span>
+                </p>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- about section end -->
+
+  <!-- overview section start -->
+  <section class="pt-120 pb-120">
+    <div class="container">
+      <div class="row gy-4 align-items-center justify-content-between">
+        <div class="col-lg-6 order-lg-1 order-2">
+          <div class="row gy-4">
+            <div class="col-sm-6">
+              <div class="overview-item">
+                <h4 class="overview-amount">20+</h4>
+                <p class="overview-caption">Usuarios Online</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="overview-item">
+                <h4 class="overview-amount">2+</h4>
+                <p class="overview-caption">Locutores</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="overview-item">
+                <h4 class="overview-amount">2+</h4>
+                <p class="overview-caption">Programas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 order-lg-2 order-1">
+          <div class="overview-thumb">
+            <img src="{% static 'assets/images/bg/overview.jpg' %}" alt="image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- overview section end -->
+
+
+
+  <!-- music show section start -->
+  <section class="pt-120 pb-120 section-bg">
+    <div class="container">
+      <div class="row gy-4 justify-content-between align-items-center">
+        <div class="col-lg-5">
+          <div class="music-single-thumb">
+            <img src="{% static 'assets/images/shows/music/4.jpg' %}" alt="image">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="music-show-content">
+            <span class="top-title">Musica - Podcast - y mucho mas!</span>
+            <h2 class="section-title">El mejor medio digital que hayas visitado</h2>
+            <p>Solo hits que construyeron el mundo musical, además de los más creativos podcasts y entrevistas con temas
+              de la actualidad."
+            <div class="row gx-sm-5 counter-item-wrapper">
+              <div class="col-auto">
+                <div class="counter-item style-two">
+                  <h3 class="counter-amount">24K</h3>
+                  <h4 class="countrer-title">Listener</h4>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="counter-item style-two">
+                  <h3 class="counter-amount">50+</h3>
+                  <h4 class="countrer-title">Podcasts</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- music show section end -->
+
+  <!-- sponsor section start -->
+  <section class="pt-120 pb-120">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 text-center">
+          <div class="section-top">
+            <span class="top-title">Patrocinadores</span>
+            <h2 class="section-title">Nuestros amados</h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+      <div class="sponsor-slider">
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+      </div><!-- sponsor-slider end -->
+    </div>
+  </section>
+  <!-- sponsor section end -->
+
+  <!-- rj section start -->
+  <section class="pt-120 pb-120 section-bg">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Nuestro Staff</span>
+            <!--<h2 class="section-title">Nuestro Staff</h2>-->
+          </div>
+        </div>
+      </div><!-- row end -->
+      <div class="row gy-4">
+        <div class="col-lg-3 col-sm-6">
+          <div class="rj-item style-two">
+            <div class="thumb">
+              <img src="{% static 'assets/images/rj/1.jpg' %}" alt="image">
+            </div>
+            <div class="content">
+              <h4 class="rj-name">
+                <a href="jockey-details.html">Jovi Medina</a>
+              </h4>
+              <p class="rj-designation">IT Specialist</p>
+              <ul class="rj-social-links">
+                <li>
+                  <a href="https://www.facebook.com/profile.php/?id=100014394426312&name=xhp_nt__fb__action__open_user"><i
+                      class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/jovi.medina.58?igsh=NGVhN2U2NjQ0Yg=="><i
+                      class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#0"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href="#0"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div><!-- rj-item end -->
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="rj-item style-two">
+            <div class="thumb">
+              <img src="assets/images/rj/2.jpg" alt="image">
+            </div>
+            <div class="content">
+              <h4 class="rj-name">
+                <a href="{% static 'assets/images/rj/2.jpg' %}">Anibal Valladares</a>
+              </h4>
+              <p class="rj-designation">Abogado</p>
+              <ul class="rj-social-links">
+                <li>
+                  <a href="https://www.facebook.com/jose.guilbauthvalladares"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#0"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#0"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href="#0"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div><!-- rj-item end -->
+        </div>
+      </div>
+    </div><!-- row end -->
+    <div class="text-center mt-50">
+      <a href="radio-jockey.html" class="btn btn-main">Explore More</a>
+    </div>
+    </div>
+  </section>
+  <!-- rj section end -->
+
+
+
+</main><!-- site-body end -->
+{% endblock content %}

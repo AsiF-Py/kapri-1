@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<main class="site-body">
+  <!-- page banner start -->
+  <section class="inner-page-banner"
+    style="background-image: url({% static 'assets/images/bg/inner-page-banner.jpg' %});">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="inner-page-title text-white">FAQ</h2>
+          <ul class="page-breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- page banner end -->
+
+  <!-- faq section start -->
+  <section class="pt-120 pb-120 section-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 d-lg-block d-none">
+          <div class="faq-thumb">
+            <img src="{% static 'assets/images/bg/faq1.jpg' %}" alt="image">
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="h-1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c-1"
+                  aria-expanded="true" aria-controls="c-1">
+                  ¿Como KapriOnline(K.O.) funciona o que la hace especial?
+                </button>
+              </h2>
+              <div id="c-1" class="accordion-collapse collapse show" aria-labelledby="h-1"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Kapri Online redefine la experiencia de streaming, utilizando el equipo y los servicios más
+                    sofisticados del mercado actual. Con transmisiones a 128 kbps, empleamos los transmisores,
+                    amplificadores, compresores y ecualizadores más avanzados disponibles. Pero eso no es todo; detrás
+                    de escena, contamos con un equipo de primera categoría distribuido alrededor del mundo, garantizando
+                    una calidad y un servicio sin precedentes. Sumérgete en la vanguardia del streaming con Kapri
+                    Online.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="h-2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c-2"
+                  aria-expanded="false" aria-controls="c-2">
+                  ¿Quien escuchará tu publicidad en nuestro medio?
+                </button>
+              </h2>
+              <div id="c-2" class="accordion-collapse collapse" aria-labelledby="h-2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>En Kapri Online (K.O.), conectamos con una audiencia global de habla hispana e inglesa,
+                    enfocándonos en personas de 25 a 60 años. Sin embargo, nuestra programación de calidad atrae a
+                    oyentes de todas las edades, extendiendo el alcance de su publicidad más allá de nuestro núcleo
+                    demográfico.
+
+                    Asociarse con nosotros significa no solo acceder a nuestro público objetivo, sino también ampliar su
+                    impacto a una audiencia diversa y creciente. Aproveche esta oportunidad para destacar su marca en un
+                    mercado competitivo con Kapri Online (K.O.).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="h-3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c-3"
+                  aria-expanded="false" aria-controls="c-3">
+                  ¿Como mantengo a mis oyentes cautivos?
+                </button>
+              </h2>
+              <div id="c-3" class="accordion-collapse collapse" aria-labelledby="h-3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Mantenemos a nuestra audiencia cautivada con una programación excepcional que te transporta a vivir
+                    momentos mágicos, alejándote de la contaminación musical contemporánea. Nuestras líneas de
+                    comunicación, incluyendo aplicaciones Android y Apple, redes sociales, WhatsApp y correos
+                    electrónicos, establecen
+                    un vínculo directo y bidireccional con nuestro centro de operaciones en Los Ángeles, California,
+                    asegurando que siempre estés conectado con lo mejor de la música.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="h-4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c-4"
+                  aria-expanded="false" aria-controls="c-4">
+                  ¿Como se sostiene Kapri Online economicamente?
+                </button>
+              </h2>
+              <div id="c-4" class="accordion-collapse collapse" aria-labelledby="h-4" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Actualmente, nuestro medio se financia a través de inversiones privadas. Como parte de nuestra
+                    estrategia de expansión, estamos explorando la diversificación de nuestras fuentes de ingresos
+                    mediante la comercialización de nuestra marca. Esto incluirá la venta de productos personalizados,
+                    tales como camisetas, gorras, vasos y una amplia gama de artículos. Adicionalmente, hemos
+                    implementado un sistema de donaciones a través de plataformas reconocidas como PayPal, Venmo y
+                    Zelle, facilitando así el apoyo de nuestra audiencia y stakeholders en este proyecto.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="h-5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c-5"
+                  aria-expanded="false" aria-controls="c-5">
+                  ¿Cuales son los planes de expansión?
+                </button>
+              </h2>
+              <div id="c-5" class="accordion-collapse collapse" aria-labelledby="h-5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Tras la exitosa diversificación de nuestra marca, avanzaremos hacia la integración en un consorcio
+                    de medios de comunicación de prestigio, denominado Mi Radio Now. Este consorcio tiene la ambición de
+                    lanzar una estación de radio dedicada a cada uno de los géneros más populares, manteniendo el
+                    compromiso con la filosofía de "Solo Hits". Además, planeamos expandir nuestra presencia en el
+                    ámbito del podcasting, lo que nos permitirá fortalecer aún más la comunicación directa entre
+                    nosotros como medio y, lo más importante, nuestros fieles seguidores. Este paso representa un avance
+                    significativo en nuestra misión de ser líderes en la industria de la comunicación, ofreciendo
+                    contenido de calidad y relevante para nuestra audiencia.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="h-6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c-6"
+                  aria-expanded="false" aria-controls="c-6">
+                  ¿Cuanto tiempo pasara para que nuestros planes de expasion se hagan realidad?
+                </button>
+              </h2>
+              <div id="c-6" class="accordion-collapse collapse" aria-labelledby="h-6" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Como empresa consolidada en el sector de la comunicación, confiamos en que, en el transcurso de los
+                    próximos años, lograremos una sólida popularidad en la industria. Estamos comprometidos con el
+                    crecimiento sostenido, evitando apresurar nuestros procesos para no comprometer la calidad de
+                    nuestro producto final. Nuestra estrategia está diseñada para garantizar que cada paso que damos
+                    contribuye a fortalecer nuestra marca, manteniendo siempre la excelencia que nuestros clientes y
+                    audiencia esperan de nosotros.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- faq section end -->
+
+</main><!-- site-body end -->
+
+{% endblock content %}

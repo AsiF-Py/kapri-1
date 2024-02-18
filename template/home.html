@@ -1,0 +1,741 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<main class="site-body">
+
+  <!-- banner section start -->
+  <section class="banner-section style-two"
+    style="background-image: url({% static 'assets/images/bg/banner-bg2.jpg' %});">
+
+
+
+
+    <div class="container">
+      <div class="row align-items-center justify-content-end">
+        <div class="col-lg-6 text-lg-end text-center">
+          <h2 class="banner-title">Escucha Kapri<span>ONLINE</span></h2>
+
+          <button class="button" style="vertical-align:middle"
+            href="https://apps.apple.com/us/app/kapri-online-radio/id6475898926" target="_blank"><span>Descarga para
+              Apple </span></button>
+
+
+
+          <button class="button" style="vertical-align:middle" href="https://play.google.com/store"
+            target="_blank"><span> Descarga en Android</span></button>
+
+
+
+          <p class="banner-details">¡Ven y únete a nosotros en Kapri Online para disfrutar de lo mejor del Pop y el Rock
+            Internacional! Déjate llevar por la increíble música y las grandes vibras. Te estamos esperando para que
+            juntos vivamos una experiencia musical extraordinaria.</p>
+        </div>
+      </div><!-- row end -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="single-audio-player style-two">
+            <div class="single-audio-thumb">
+              <img src="{% static 'assets/images/shows/player/2.jpg' %}" alt="image">
+            </div>
+            <div class="single-audio-content">
+              <div class="single-audio-content-top">
+                <h4 class="title">Todos los show en Vivo</h4>
+                <p class="audio-time">Anibal Valladares 7:00-9:00 PM <span class="live-status">Live</span></p>
+              </div>
+
+              <iframe src="https://a4.asurahosting.com/public/kaprionline/embed?theme=dark" frameborder="0"
+                allowtransparency="true" style="width: 100%; min-height: 150px; border: 0;"></iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- banner section end -->
+
+
+  <!-- about section start -->
+  <section class="pt-120 pb-120 section-bg overflow-hidden">
+    <div class="container">
+      <div class="row gy-5 align-items-center justify-content-between">
+        <div class="col-lg-6">
+          <div class="about-thumb-wrapper-two">
+            <img src="{% static 'assets/images/about/left-img2.jpg' %}" alt="image">
+            <img src="{% static 'assets/images/about/about-circle2.png' %}" alt="image" class="about-thumb-circle">
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-6">
+          <div class="about-content">
+            <span class="top-title">About Us</span>
+            <h2 class="section-title">Solo Exitos en Ingles y Español</h2>
+            <p>¡Ven y únete a nosotros en Kapri Online para disfrutar de lo mejor del Pop y el Rock Internacional, así
+              como de la increíble música nacional! Déjate llevar por la diversidad musical y las grandes vibras. Te
+              estamos esperando para que juntos vivamos una experiencia musical extraordinaria. </p>
+            <a href="/about/" class="btn btn-main">See More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- about section end -->
+
+  <!-- podcast section start -->
+  <section class="pt-120 pb-120 overflow-hidden">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Show en vivo</span>
+            <h2 class="section-title">Podcast Schedule</h2>
+          </div>
+        </div>
+      </div> <!-- row end -->
+
+      <div class="row">
+        <div class="col-lg-3">
+          <ul class="nav nav-tabs show-tabs-two" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="day1-tab" data-bs-toggle="tab" data-bs-target="#day1-tab-pane"
+                type="button" role="tab" aria-controls="day1-tab-pane" aria-selected="true">Saturday</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="day2-tab" data-bs-toggle="tab" data-bs-target="#day2-tab-pane" type="button"
+                role="tab" aria-controls="day2-tab-pane" aria-selected="false">Sunday</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="day3-tab" data-bs-toggle="tab" data-bs-target="#day3-tab-pane" type="button"
+                role="tab" aria-controls="day3-tab-pane" aria-selected="false">Monday</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="day4-tab" data-bs-toggle="tab" data-bs-target="#day4-tab-pane" type="button"
+                role="tab" aria-controls="day4-tab-pane" aria-selected="false">Tuesday</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="day5-tab" data-bs-toggle="tab" data-bs-target="#day5-tab-pane" type="button"
+                role="tab" aria-controls="day5-tab-pane" aria-selected="false">Wednesday</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="day6-tab" data-bs-toggle="tab" data-bs-target="#day6-tab-pane" type="button"
+                role="tab" aria-controls="day6-tab-pane" aria-selected="false">Thursday</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="day7-tab" data-bs-toggle="tab" data-bs-target="#day7-tab-pane" type="button"
+                role="tab" aria-controls="day7-tab-pane" aria-selected="false">Friday</button>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-9">
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="day1-tab-pane" role="tabpanel" aria-labelledby="day1-tab"
+              tabindex="0">
+              <div class="podcast-slider-two">
+                {%for show in sa%}
+                <div class="single-slide">
+                  <div class="podcast-item style-two link-item">
+                    <a href="show/{{show.id}}/" class="full-link"></a>
+                    <div class="podcast-item-thumb">
+                      <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                      <div class="thumb-content">
+                        <p>{{show.end_time}}-{{show.start_time}}</p>
+                      </div>
+                    </div>
+                    <div class="podcast-item-content">
+                      <div class="artist-thumb">
+                        <img src="{{show.host.picture.url}}" alt="image">
+                      </div>
+                      <div class="artist-content">
+                        <h5 class="show-name">{{show.title}}</h5>
+                        <p class="artist-name">{{show.host.role}}</p>
+                      </div>
+                    </div>
+                  </div><!-- podcast-item end -->
+                </div>
+                {%endfor%}
+              </div><!-- podcast-slider end-->
+            </div>
+            <div class="tab-pane fade" id="day2-tab-pane" role="tabpanel" aria-labelledby="day2-tab" tabindex="0">
+              <div class="podcast-slider-two">
+                {%for show in su%}
+                <div class="single-slide">
+                  <div class="podcast-item style-two link-item">
+                    <a href="show/{{show.id}}/" class="full-link"></a>
+                    <div class="podcast-item-thumb">
+                      <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                      <div class="thumb-content">
+                        <p>{{show.end_time}}-{{show.start_time}}</p>
+                      </div>
+                    </div>
+                    <div class="podcast-item-content">
+                      <div class="artist-thumb">
+                        <img src="{{show.host.picture.url}}" alt="image">
+                      </div>
+                      <div class="artist-content">
+                        <h5 class="show-name">{{show.title}}</h5>
+                        <p class="artist-name">{{show.host.role}}</p>
+                      </div>
+                    </div>
+                  </div><!-- podcast-item end -->
+                </div>
+                {%endfor%}
+              </div><!-- podcast-slider end-->
+            </div>
+            <div class="tab-pane fade" id="day3-tab-pane" role="tabpanel" aria-labelledby="day3-tab" tabindex="0">
+              <div class="podcast-slider-two">
+                {%for show in mo%}
+                <div class="single-slide">
+                  <div class="podcast-item style-two link-item">
+                    <a href="show/{{show.id}}/" class="full-link"></a>
+                    <div class="podcast-item-thumb">
+                      <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                      <div class="thumb-content">
+                        <p>{{show.end_time}}-{{show.start_time}}</p>
+                      </div>
+                    </div>
+                    <div class="podcast-item-content">
+                      <div class="artist-thumb">
+                        <img src="{{show.host.picture.url}}" alt="image">
+                      </div>
+                      <div class="artist-content">
+                        <h5 class="show-name">{{show.title}}</h5>
+                        <p class="artist-name">{{show.host.role}}</p>
+                      </div>
+                    </div>
+                  </div><!-- podcast-item end -->
+                </div>
+                {%endfor%}
+              </div><!-- podcast-slider end-->
+            </div>
+            <div class="tab-pane fade" id="day4-tab-pane" role="tabpanel" aria-labelledby="day4-tab" tabindex="0">
+              <div class="podcast-slider-two">
+                {%for show in tu%}
+                <div class="single-slide">
+                  <div class="podcast-item style-two link-item">
+                    <a href="show/{{show.id}}/" class="full-link"></a>
+                    <div class="podcast-item-thumb">
+                      <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                      <div class="thumb-content">
+                        <p>{{show.end_time}}-{{show.start_time}}</p>
+                      </div>
+                    </div>
+                    <div class="podcast-item-content">
+                      <div class="artist-thumb">
+                        <img src="{{show.host.picture.url}}" alt="image">
+                      </div>
+                      <div class="artist-content">
+                        <h5 class="show-name">{{show.title}}</h5>
+                        <p class="artist-name">{{show.host.role}}</p>
+                      </div>
+                    </div>
+                  </div><!-- podcast-item end -->
+                </div>
+                {%endfor%}
+              </div><!-- podcast-slider end-->
+            </div>
+            <div class="tab-pane fade" id="day5-tab-pane" role="tabpanel" aria-labelledby="day5-tab" tabindex="0">
+              <div class="podcast-slider-two">
+                {%for show in we%}
+                <div class="single-slide">
+                  <div class="podcast-item style-two link-item">
+                    <a href="show/{{show.id}}/" class="full-link"></a>
+                    <div class="podcast-item-thumb">
+                      <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                      <div class="thumb-content">
+                        <p>{{show.end_time}}-{{show.start_time}}</p>
+                      </div>
+                    </div>
+                    <div class="podcast-item-content">
+                      <div class="artist-thumb">
+                        <img src="{{show.host.picture.url}}" alt="image">
+                      </div>
+                      <div class="artist-content">
+                        <h5 class="show-name">{{show.title}}</h5>
+                        <p class="artist-name">{{show.host.role}}</p>
+                      </div>
+                    </div>
+                  </div><!-- podcast-item end -->
+                </div>
+                {%endfor%}
+
+              </div><!-- podcast-slider end-->
+            </div>
+            <div class="tab-pane fade" id="day6-tab-pane" role="tabpanel" aria-labelledby="day6-tab" tabindex="0">
+              <div class="podcast-slider-two">
+                {%for show in th%}
+                <div class="single-slide">
+                  <div class="podcast-item style-two link-item">
+                    <a href="show/{{show.id}}/" class="full-link"></a>
+                    <div class="podcast-item-thumb">
+                      <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                      <div class="thumb-content">
+                        <p>{{show.end_time}}-{{show.start_time}}</p>
+                      </div>
+                    </div>
+                    <div class="podcast-item-content">
+                      <div class="artist-thumb">
+                        <img src="{{show.host.picture.url}}" alt="image">
+                      </div>
+                      <div class="artist-content">
+                        <h5 class="show-name">{{show.title}}</h5>
+                        <p class="artist-name">{{show.host.role}}</p>
+                      </div>
+                    </div>
+                  </div><!-- podcast-item end -->
+                </div>
+                {%endfor%}
+
+              </div><!-- podcast-slider end-->
+            </div>
+            <div class="tab-pane fade" id="day7-tab-pane" role="tabpanel" aria-labelledby="day7-tab" tabindex="0">
+              <div class="podcast-slider-two">
+                {%for show in fr%}
+                <div class="single-slide">
+                  <div class="podcast-item style-two link-item">
+                    <a href="show/{{show.id}}/" class="full-link"></a>
+                    <div class="podcast-item-thumb">
+                      <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+                      <div class="thumb-content">
+                        <p>{{show.end_time}}-{{show.start_time}}</p>
+                      </div>
+                    </div>
+                    <div class="podcast-item-content">
+                      <div class="artist-thumb">
+                        <img src="{{show.host.picture.url}}" alt="image">
+                      </div>
+                      <div class="artist-content">
+                        <h5 class="show-name">{{show.title}}</h5>
+                        <p class="artist-name">{{show.host.role}}</p>
+                      </div>
+                    </div>
+                  </div><!-- podcast-item end -->
+                </div>
+                {%endfor%}
+              </div><!-- podcast-slider end-->
+            </div>
+          </div><!-- tab-content end -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- podcast section end -->
+
+  <!-- music show section start -->
+  <section class="pt-120 pb-120 section-bg position-relative z-index-p overflow-hidden">
+    <div class="top-corner-el">
+      <img src="assets/images/about/about-circle.png" alt="image">
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Live Show</span>
+            <h2 class="section-title">Latest Music</h2>
+          </div>
+        </div>
+      </div> <!-- row end -->
+      <div class="row">
+        <div class="col-lg-12 small-player-wrapper">
+          {%for show in latest_music%}
+          <div class="single-audio-player style-two style-sm">
+            <div class="single-audio-thumb">
+              <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+              <span class="single-audio-serial">{{ forloop.counter }}</span>
+            </div>
+            <div class="single-audio-content">
+              <div class="single-audio-content-top">
+                <h4 class="title">{{ show.title }}</h4>
+                <span class="live-status">Pop</span>
+                <button type="button" class="bookmark-icon"><i class="far fa-heart"></i></button>
+              </div>
+              <audio controls src="{% if show.sound%} {{show.sound.url}} {%endif%}" class="style-two"></audio>
+            </div>
+          </div><!-- single-audio-player end -->
+          {%endfor%}
+        </div>
+        <div class="col-lg-12 mt-5 text-center">
+          <a href="/show/show-schedule/" class="btn btn-main">See More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- music show section end -->
+
+  <!-- upcoming section start -->
+  <section class="upcoming-section pt-120 pb-120">
+    <div class="container">
+      <div class="row justify-content-end gy-4">
+        <div class="col-lg-6">
+          <div class="upcoming-section-thumb">
+            <img src="{%if upcoming_show.image %} {{upcoming_show.image.url}} {%endif%}" alt="image">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="upcoming-content">
+            <span class="top-title">Upcoming Show</span>
+            <h2 class="section-title">{{upcoming_show.title}}</h2>
+            <p>{{upcoming_show.description}}
+            </p>
+            <div class="show-rj">
+              <div class="show-rj-thumb">
+                <img src="{{upcoming_show.host.picture.url}}" alt="image">
+              </div>
+              <div class="show-rj-content">
+                <h4 class="show-rj-name">{{upcoming_show.host.name}}</h4>
+                <p>{{upcoming_show.start_time}} To {{upcoming_show.end_time}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- upcoming section end -->
+
+  <!-- previous show section start -->
+  <section class="previous-show-section pt-120 pb-120 overflow-hidden"
+    style="background-image: url('assets/images/bg/previous-show.jpg');">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Yesterday</span>
+            <h2 class="section-title">Previous shows </h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+    </div>
+    <div class="previous-show-slider">
+      {% for show in previous_show %}
+      <div class="single-slide">
+        <div class="show-item style-two">
+          <div class="thumb">
+            <img src="{% if show.image%} {{show.image.url}} {%endif%}" alt="image">
+          </div>
+          <audio controls src="{% if show.sound%} {{show.sound.url}} {%endif%}" class="style-two"></audio>
+          <div class="show-item-content">
+            <div class="show-item-top">
+              <h5 class="show-item-top-title">{{show.title}}</h5>
+              <span class="show-item-duration">
+                <p>{{ show.duration }} min
+              </span>
+            </div>
+            <div class="artist-thumb">
+              <img src="{{show.host.picture.url}}" alt="image">
+            </div>
+            <div class="artist-content">
+              <h5 class="show-name">{{show.host.name}}</h5>
+              <p class="artist-name">{{show.host.role}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </section>
+  <!-- previous show section end -->
+
+  <!-- music show section start -->
+  <section class="pt-120 pb-120 section-bg">
+    <div class="container">
+      <div class="row gy-5 justify-content-between align-items-center">
+        <div class="col-lg-5">
+          <div class="music-single-thumb">
+            <img src="{% static 'assets/images/shows/music/4.jpg' %}" alt="image">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="music-show-content">
+            <span class="top-title">Music Show</span>
+            <h2 class="section-title">Best Radio Station In Your Frequency</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper ultricies urna et imperdiet et pulvinar
+              in
+              ullamcorper.</p>
+          </div>
+          <div class="row gx-sm-5 counter-item-wrapper">
+            <div class="col-auto">
+              <div class="counter-item style-two">
+                <h3 class="counter-amount">24K</h3>
+                <h4 class="countrer-title">Listener</h4>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="counter-item style-two">
+                <h3 class="counter-amount">50+</h3>
+                <h4 class="countrer-title">Radio Jockey</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- music show section end -->
+
+  <section class="pt-120 pb-120">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Nuestros Locutores</span>
+            <h2 class="section-title"></h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+      <div class="row gy-4 justify-content-center">
+        {% for rj in rj %}
+        <div class="col-lg-3 col-sm-6">
+          <div class="rj-item">
+            <div class="thumb">
+              <img src="{{rj.picture.url}}" alt="image">
+            </div>
+            <div class="content">
+              <h4 class="rj-name"><a href="/show/rj/{{rj.id}}/">{{rj.name}}</a></h4>
+              <ul class="rj-social-links">
+                <li>
+                  <a href="{{rj.facebook_profile}}"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="{{rj.insta_profile}}"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="{{rj.linkedin_profile}}"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href="{{rj.x_profile}}"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div><!-- rj-item end -->
+        </div>
+        {%endfor%}
+
+
+
+        <div class="text-center mt-50">
+          <a href="radio-jockey.html" class="btn btn-main">Explore More</a>
+        </div>
+      </div>
+  </section>
+
+  <!-- sponsor section start -->
+  <section class="pt-120 pb-120 section-bg">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 text-center">
+          <div class="section-top">
+            <span class="top-title">Sponsors</span>
+            <h2 class="section-title">Our Lovely Pratner</h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+      <div class="sponsor-slider">
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="sponsor-item">
+            <img src="{% static 'assets/images/sponsors/1.png' %}" alt="image">
+          </div>
+        </div><!-- single-slide end -->
+      </div><!-- sponsor-slider end -->
+    </div>
+  </section>
+  <!-- sponsor section end -->
+
+  <!-- testimonial section start -->
+  <section class="testimonial-section has-overlay pt-120 pb-120 overflow-hidden"
+    style="background-image: url({% static 'assets/images/bg/testimonial.jpg' %});">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Testimonial</span>
+            <h2 class="section-title">Our Lovely Listener</h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+      <div class="testimonial-slider">
+        <div class="single-slide">
+          <div class="testimonial-item style-two">
+            <i class="fas fa-quote-right testimonial-quote"></i>
+            <div class="testimonial-client">
+              <div class="client-thumb">
+                <img src="{% static 'assets/images/testimonial/1.jpg'%}" alt="image">
+              </div>
+              <div class="client-content">
+                <h5 class="client-nae">Alino</h5>
+                <p>Music Artist</p>
+              </div>
+            </div>
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim imperdiet justo, sapien viverra
+              commodo
+              id duis praesent tempus.”</p>
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="testimonial-item style-two">
+            <i class="fas fa-quote-right testimonial-quote"></i>
+            <div class="testimonial-client">
+              <div class="client-thumb">
+                <img src="{% static 'assets/images/testimonial/2.jpg' %}" alt="image">
+              </div>
+              <div class="client-content">
+                <h5 class="client-nae">Ranio</h5>
+                <p>Music Artist</p>
+              </div>
+            </div>
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim imperdiet justo, sapien viverra
+              commodo
+              id duis praesent tempus.”</p>
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="testimonial-item style-two">
+            <i class="fas fa-quote-right testimonial-quote"></i>
+            <div class="testimonial-client">
+              <div class="client-thumb">
+                <img src="{% static 'assets/images/testimonial/3.jpg' %}" alt="image">
+              </div>
+              <div class="client-content">
+                <h5 class="client-nae">Jesicca</h5>
+                <p>Music Artist</p>
+              </div>
+            </div>
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim imperdiet justo, sapien viverra
+              commodo
+              id duis praesent tempus.”</p>
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="testimonial-item style-two">
+            <i class="fas fa-quote-right testimonial-quote"></i>
+            <div class="testimonial-client">
+              <div class="client-thumb">
+                <img src="{% static 'assets/images/testimonial/4.jpg' %}" alt="image">
+              </div>
+              <div class="client-content">
+                <h5 class="client-nae">Alex</h5>
+                <p>Music Artist</p>
+              </div>
+            </div>
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim imperdiet justo, sapien viverra
+              commodo
+              id duis praesent tempus.”</p>
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="testimonial-item style-two">
+            <i class="fas fa-quote-right testimonial-quote"></i>
+            <div class="testimonial-client">
+              <div class="client-thumb">
+                <img src="{% static 'assets/images/testimonial/1.jpg' %}" alt="image">
+              </div>
+              <div class="client-content">
+                <h5 class="client-nae">Alino</h5>
+                <p>Music Artist</p>
+              </div>
+            </div>
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim imperdiet justo, sapien viverra
+              commodo
+              id duis praesent tempus.”</p>
+          </div>
+        </div><!-- single-slide end -->
+        <div class="single-slide">
+          <div class="testimonial-item style-two">
+            <i class="fas fa-quote-right testimonial-quote"></i>
+            <div class="testimonial-client">
+              <div class="client-thumb">
+                <img src="{% static 'assets/images/testimonial/2.jpg' %}" alt="image">
+              </div>
+              <div class="client-content">
+                <h5 class="client-nae">Ranio</h5>
+                <p>Music Artist</p>
+              </div>
+            </div>
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim imperdiet justo, sapien viverra
+              commodo
+              id duis praesent tempus.”</p>
+          </div>
+        </div><!-- single-slide end -->
+      </div><!-- testimonial-slider end -->
+    </div>
+  </section>
+  <!-- testimonial section end -->
+
+  <!-- blog section start -->
+  <section class="pt-120 pb-120">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">Blog</span>
+            <h2 class="section-title">Our Latest News</h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+      <div class="row gy-4 justify-content-center">
+        {% for blog in blog %}
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-item style-two">
+            <div class="blog-thumb">
+              <a href="blog-details.html" class="d-block h-100">
+                <img src="{{blog.image.url}}" alt="image">
+              </a>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="single-meta">{{blog.auther}}</span>
+                <span class="single-meta">{{blog.created}}</span>
+              </div>
+              <h4 class="blog-title">
+                <a href="/blog/{{blog.slug}}/">{{blog.title}}</a>
+              </h4>
+              <a href="/blog/{{blog.slug}}/" class="blog-btn">Read more</a>
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+
+      </div>
+      <div class="mt-50 text-center">
+        <a href="/blog/" class="btn btn-main">View More</a>
+      </div>
+    </div>
+  </section>
+  <!-- blog section end -->
+
+</main><!-- site-body end -->
+
+{% endblock content %}

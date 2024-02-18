@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+<main class="site-body">
+  <!-- page banner start -->
+  <section class="inner-page-banner"
+    style="background-image: url('{% static 'assets/images/bg/inner-page-banner.jpg' %}');">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="inner-page-title text-white">Radio Jockey</h2>
+          <ul class="page-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Radio Jockey</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- page banner end -->
+  <!-- rj section start -->
+  <section class="pt-120 pb-120 section-bg">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-top">
+            <span class="top-title">RJ</span>
+            <h2 class="section-title">Our Expert RJ</h2>
+          </div>
+        </div>
+      </div><!-- row end -->
+      <div class="rj-sldier">
+        {% for rj in rj_list %}
+        <div class="single-slide">
+          <div class="rj-item style-two">
+            <div class="thumb">
+              <img src="{{rj.picture.url}}" alt="image">
+            </div>
+            <div class="content">
+              <h4 class="rj-name">
+                <a href="/show/rj/{{rj.id}}/">{{rj.name}}</a>
+              </h4>
+              <p class="rj-designation">{{rj.role}}</p>
+              <ul class="rj-social-links">
+                <li>
+                  <a href="{{rj.facebook_profile}}"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="{{rj.insta_profile}}"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="{{rj.linkedin_profile}}"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href="{{rj.x_profile}}"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div><!-- rj-item end -->
+        </div>
+        {% endfor %}
+
+      </div><!-- row end -->
+
+    </div>
+  </section>
+  <!-- rj section end -->
+
+</main>
+{% endblock content %}

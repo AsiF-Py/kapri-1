@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main class="site-body">
+    <!-- page banner start -->
+    <section class="inner-page-banner"
+        style="background-image: url('{% static 'assets/images/bg/inner-page-banner.jpg' %}');">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="inner-page-title text-white">Radio Jockey Details</h2>
+                    <ul class="page-breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Jockey Details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- page banner end -->
+
+    <!-- rj details section start -->
+    <section class="pt-120 pb-120 section-bg">
+        <div class="container">
+            <div class="row gy-4 justify-content-between">
+                <div class="col-lg-4">
+                    <div class="rj-details-thumb">
+                        <img src="{{rj.picture.url}}" alt="image">
+                    </div>
+
+                    <div class="rj-details-box mt-30 text-center">
+                        <h4>{{rj.name}}</h4>
+                        <p class="rj-details-designation">{{rj.role}}</p>
+                        <ul class="rj-social-links justify-content-center">
+                            <li>
+                                <a href="{{rj.facebook_profile}}"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{rj.insta_profile}}"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{rj.linkedin_profile}}"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{rj.x_profile}}"><i class="fab fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-8">
+                    <div class="rj-details-box">
+                        <div class="rj-details-contact">
+                            <div class="left">
+                                <h5 class="title">Contact Info</h5>
+                                <ul class="rj-details-contact-list">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <p>Location: <span>{{rj.location}}</span></p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <p>Phone Number: <span>{{rj.phone_number}}</span></p>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-envelope"></i>
+                                        <p>Email: <span>{{rj.email}}</span></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right">
+                                <img src="{% static 'assets/images/logo.png' %}" alt="image">
+                            </div>
+                        </div>
+                    </div><!-- rj-details-box end -->
+                    <div class="rj-details-box">
+                        <h5 class="title">Biography</h5>
+                        <p>{{rj.biography}}</p>
+                    </div><!-- rj-details-box end -->
+                    <div class="rj-details-box">
+                        <div class="row gy-4">
+                            <div class="col-lg-5">
+                                <div class="rj-experience">
+                                    <h5 class="mb-2 fw-500">2017-2019</h5>
+                                    <p>Redio 94.5 (Music Artist)</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="rj-experience">
+                                    <h5 class="mb-2 fw-500">2017-2019</h5>
+                                    <p>Redio 94.5 (Music Artist)</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="rj-experience">
+                                    <h5 class="mb-2 fw-500">2017-2019</h5>
+                                    <p>Redio 94.5 (Music Artist)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- rj-details-box end -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- rj details section end -->
+
+    <!-- rj shows section start -->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-top">
+                        <h2 class="section-title">RJ Miron Shows</h2>
+                    </div>
+                </div>
+            </div><!-- row end -->
+            <div class="row gy-4">
+                {% for show in rj_show %}
+                <div class="col-lg-3 col-sm-6">
+                    <div class="rj-show-item link-item">
+                        <a href="/show/{{show.id}}/" class="full-link"></a>
+                        <div class="rj-show-thumb">
+                            <img src="{%if show.image %}{{show.image.url}}{%endif%}" alt="image">
+                        </div>
+                        <div class="rj-show-content">
+                            <h4 class="title">{{show.title}}</h4>
+                            <p class="rj-show-duration">{{show.start_time}} - {{show.end_time}} </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+    <!-- rj shows section end -->
+
+    <!-- rj live show section start -->
+    <section class="pt-120 pb-120 section-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <div class="section-top">
+                        <span class="top-title">Live Show</span>
+                        <h2 class="section-title">Music Shows</h2>
+                    </div>
+                </div>
+            </div><!-- row end -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="rj-live-show single-audio-player style-two style-sm">
+                        <span class="live-status">Live</span>
+                        <div class="rj-live-show-thumb">
+                            <img src="{% static 'assets/images/shows/rj-shows/b1.jpg'%}" alt="image">
+                        </div>
+                        <div class="single-audio-content">
+                            <audio controls src="{% static 'assets/audio/main.mp3'%}" class="style-two"></audio>
+                        </div>
+                    </div><!-- single-audio-player end -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- rj live show section end -->
+
+</main><!-- site-body end -->
+{% endblock %}
