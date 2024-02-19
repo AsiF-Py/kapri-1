@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY',get_random_secret_key())
 #jovi changed it
 DEBUG = os.getenv('DEBUG','False')=='True' #Added by Jovi
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS','127.0.0.1','localhost').split(',')
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS','127.0.0.1,localhost').split(',')
 
 
 # Application definition
