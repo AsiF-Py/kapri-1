@@ -31,12 +31,9 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY',get_random_secret_key())
 #jovi changed it
 DEBUG = os.getenv('DEBUG','False')=='True' #Added by Jovi
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS','127.0.0.1,localhost').split(',')
-=======
+
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
 
->>>>>>> 9f77dd9 (Changes on base.html and home.html)
 
 
 # Application definition
