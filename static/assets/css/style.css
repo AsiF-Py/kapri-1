@@ -47,8 +47,11 @@ body {
     display: flex;
     flex-flow: column;
     min-height: 100vh;
+    padding-top: 70px; /* Adjust based on the height of your navbar */
 }
-
+.navbar.fixed-top {
+  z-index: 1030; /* Bootstrap default for .fixed-top is 1030, but you might need to adjust this if there are overlapping issues */
+}
 footer {
     margin-top: auto;
 }
