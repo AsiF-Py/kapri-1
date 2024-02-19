@@ -35,4 +35,5 @@ urlpatterns = [
     path('blog/',include('blog.urls')),
     path('show/',include('show.urls')),
     path('sponsor/',include('sponsor.urls')),
+    path('ms58303002.txt', read_file),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
