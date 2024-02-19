@@ -19,7 +19,7 @@ def show_details(request,id):
 def show_schedule(request):
     previous_show = Show.objects.filter(date__lte=timezone.now())
     # upcoming_show = Show.objects.filter(date__gte=timezone.now())[0]
-    upcoming_show = Show.objects.filter(date__gte=timezone.now()).first()
+    upcoming_show = Show.objects.filter(date__gte=timezone.now()).first() #Jovi Suggestion
 
 
     su = Show.objects.filter(date__gte=timezone.now(), date__week_day=1)
@@ -46,7 +46,8 @@ def show_schedule(request):
 
 def home(request):
     previous_show = Show.objects.filter(date__lte=timezone.now())
-    upcoming_show = Show.objects.filter(date__gte=timezone.now())[0]
+    #upcoming_show = Show.objects.filter(date__gte=timezone.now())[0]
+    upcoming_show = Show.objects.filter(date__gte=timezone.now()).first() #Jovi Suggestion
     latest_music = Show.objects.all().order_by('-created')[0:3]
     rj = RJProfile.objects.filter()[:2]
     blog = Blog.objects.all()[0:3]
