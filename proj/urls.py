@@ -21,11 +21,7 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 from show.views import home
 from sponsor.views import create_subscribe
-def read_file(request):
-    f = open('ms58303002.txt', 'r')
-    file_content = f.read()
-    f.close()
-    return HttpResponse(file_content, content_type="text/plain")
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home,name='home'),
@@ -40,7 +36,7 @@ urlpatterns = [
     path('blog/',include('blog.urls')),
     path('show/',include('show.urls')),
     path('sponsor/',include('sponsor.urls')),
-    path('ms58303002.txt', read_file),
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
