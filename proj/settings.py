@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-*qatil8l&5(-+b4^@dkay1z&0$u5xnuq5g#cx=#&@0&1@^+1u=
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #jovi changed it
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
