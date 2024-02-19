@@ -37,3 +37,9 @@ urlpatterns = [
     path('sponsor/',include('sponsor.urls')),
     path('ms58303002.txt', read_file),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+def read_file(request):
+    f = open('/ms58303002.txt', 'r')
+    file_content = f.read()
+    f.close()
+    return HttpResponse(file_content, content_type="text/plain")
