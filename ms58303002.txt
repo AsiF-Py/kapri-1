@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "kaprionline.com",
+  "Id": "96037ff0-898f-4e4e-8fb9-a4fba7a3c266"
+}
